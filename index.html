@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mindset Makeover: a 12-week workbook for building the habits, clarity, and financial confidence to grow." />
+  <title>Mindset Makeover | A 12-Week Growth Workbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --gold:#e2b448; --cream:#f7f1e6; --ink:#080b12; --surface:#111725; --muted:#adb3c1; --green:#6de0b4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--ink); color:var(--cream); font-family:"DM Sans",sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    .brand-nav { position:absolute; z-index:3; top:25px; left:0; right:0; }
+    .brand-nav .wrap { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand-lockup { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px; text-decoration:none; }
+    .brand-lockup img { width:38px; height:38px; border-radius:50%; object-fit:cover; }
+    .brand-nav a:not(.brand-lockup) { color:var(--cream); text-decoration:none; font-size:13px; font-weight:700; }
+    .topbar { background:var(--gold); color:#151006; text-align:center; padding:11px 20px; font-size:14px; font-weight:700; text-decoration:none; display:block; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .hero { position:relative; overflow:hidden; padding:90px 0 82px; background:radial-gradient(circle at 20% 5%, rgba(226,180,72,.22), transparent 33%), radial-gradient(circle at 85% 60%, rgba(68,75,170,.20), transparent 28%), var(--ink); }
+    .hero::before { content:""; position:absolute; inset:0; opacity:.24; background-image:linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.08) 1px, transparent 1px); background-size:52px 52px; mask-image:linear-gradient(to bottom,black,transparent); }
+    .hero-grid { position:relative; display:grid; grid-template-columns:1.18fr .82fr; gap:66px; align-items:center; }
+    .eyebrow { color:var(--gold); font-size:11px; font-weight:700; letter-spacing:2.3px; text-transform:uppercase; }
+    h1,h2,h3 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; margin:0; }
+    h1 { font-size:clamp(46px, 7vw, 82px); letter-spacing:-2.4px; margin:17px 0 20px; }
+    h1 em, .gold { color:var(--gold); }
+    .lead { font-size:19px; max-width:620px; color:#d7d1c7; margin:0 0 30px; }
+    .button { display:inline-block; background:var(--gold); color:#171103; border-radius:9px; padding:17px 25px; text-decoration:none; font-weight:800; font-size:16px; box-shadow:0 12px 35px rgba(226,180,72,.22); transition:transform .2s,background .2s; }
+    .button:hover { transform:translateY(-2px); background:#f4cd6d; }
+    .button.secondary { color:var(--cream); background:transparent; border:1px solid rgba(247,241,230,.28); box-shadow:none; margin-left:10px; }
+    .micro { color:var(--muted); font-size:13px; margin:12px 0 0; }
+    .book { width:min(390px, 90vw); margin:auto; border-radius:15px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.56), 0 0 50px rgba(226,180,72,.14); transform:rotate(3deg); animation:float 6s ease-in-out infinite; }
+    .book img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
+    section { padding:88px 0; }
+    .section-intro { text-align:center; max-width:700px; margin:0 auto 40px; }
+    .section-intro h2 { font-size:clamp(33px,4.5vw,51px); margin:11px 0 15px; }
+    .section-intro p { color:var(--muted); font-size:17px; margin:0; }
+    .dark-surface { background:var(--surface); }
+    .pain-grid, .framework-grid, .belief-grid, .steps-grid, .series-grid { display:grid; gap:15px; }
+    .pain-grid { grid-template-columns:repeat(3,1fr); }
+    .card { background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.09); border-radius:13px; padding:23px; }
+    .pain-card span { font-size:25px; display:block; margin-bottom:9px; }
+    .pain-card p { margin:0; color:#d8d2c9; }
+    .transformation { background:linear-gradient(135deg,#171208,#101625); }
+    .transformation-grid { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; gap:20px; max-width:960px; margin:0 auto; }
+    .transform-card { border-radius:16px; padding:30px; border:1px solid rgba(255,255,255,.12); }
+    .transform-card.before { background:rgba(255,255,255,.035); }
+    .transform-card.after { background:rgba(226,180,72,.10); border-color:rgba(226,180,72,.60); }
+    .transform-card h3 { font-size:29px; margin:9px 0 16px; }
+    .transform-card ul { margin:0; padding:0; list-style:none; }
+    .transform-card li { color:#d9d4cc; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.08); }
+    .transform-card li:last-child { border-bottom:0; }
+    .transform-card.before li::before { content:"−"; color:#f39b9b; font-weight:800; margin-right:10px; }
+    .transform-card.after li::before { content:"+"; color:var(--gold); font-weight:800; margin-right:10px; }
+    .transform-arrow { align-self:center; color:var(--gold); font:900 46px/1 "Playfair Display",serif; }
+    .framework-grid { grid-template-columns:repeat(4,1fr); }
+    .framework-card { padding:22px; border-radius:12px; background:var(--ink); border:1px solid rgba(226,180,72,.19); }
+    .letter { color:var(--gold); font:900 42px/1 "Playfair Display",serif; }
+    .framework-card h3 { font:700 16px/1.2 "DM Sans",sans-serif; margin:9px 0 7px; }
+    .framework-card p { color:var(--muted); font-size:14px; margin:0; }
+    .steps-grid { grid-template-columns:repeat(3,1fr); }
+    .step { background:var(--surface); border:1px solid rgba(255,255,255,.09); border-radius:15px; overflow:hidden; }
+    .step-header { padding:19px 22px; background:rgba(226,180,72,.11); border-bottom:1px solid rgba(226,180,72,.2); }
+    .step-tag { color:var(--gold); font-size:11px; font-weight:800; letter-spacing:1.6px; }
+    .step h3 { font-size:24px; margin-top:5px; }
+    .step ul { margin:0; padding:19px 22px 24px; list-style:none; }
+    .step li { color:#d9d4cc; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06); }
+    .step li:last-child { border:0; }
+    .belief-grid { grid-template-columns:repeat(2,1fr); }
+    .belief { background:var(--ink); border-left:3px solid var(--gold); border-radius:0 10px 10px 0; padding:18px 20px; }
+    .belief-old { color:#f19393; text-decoration:line-through; font-size:14px; }
+    .belief-new { color:var(--green); font-weight:600; margin-top:7px; }
+    .brand-story { display:grid; grid-template-columns:1fr 1fr; gap:46px; align-items:center; }
+    .brand-story-image { width:100%; border-radius:17px; box-shadow:0 22px 55px rgba(0,0,0,.38); }
+    .author-card { display:flex; gap:22px; align-items:center; margin-top:28px; padding:18px; border:1px solid rgba(226,180,72,.27); border-radius:13px; background:rgba(226,180,72,.06); }
+    .author-card img { width:88px; height:88px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); }
+    .author-card h3 { font-size:22px; margin:3px 0; }
+    .author-card p { color:var(--muted); font-size:14px; margin:0; }
+    .movement { overflow:hidden; background:radial-gradient(circle at 0% 50%,rgba(226,180,72,.18),transparent 32%),#0b101b; }
+    .movement-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:46px; align-items:center; }
+    .movement-copy h2 { font-size:clamp(38px,5vw,57px); margin:11px 0 18px; }
+    .movement-copy p { color:#d6d1c8; font-size:17px; max-width:590px; }
+    .movement-list { list-style:none; padding:0; margin:25px 0 31px; }
+    .movement-list li { color:#ded8cf; padding:8px 0; }
+    .movement-list li::before { content:"↗"; color:var(--gold); font-size:19px; font-weight:800; margin-right:10px; }
+    .movement-photos { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+    .movement-photos img { width:100%; height:210px; object-fit:cover; border-radius:13px; border:1px solid rgba(255,255,255,.13); box-shadow:0 15px 35px rgba(0,0,0,.28); }
+    .movement-photos img:first-child { grid-column:1 / -1; height:270px; animation:float 7s ease-in-out infinite reverse; }
+    .socials { display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+    .social { width:43px; height:43px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.22); border-radius:50%; color:var(--cream); transition:transform .2s,border-color .2s,background .2s; }
+    .social:hover { transform:translateY(-3px); border-color:var(--gold); background:rgba(226,180,72,.12); }
+    .social svg { width:19px; height:19px; fill:currentColor; }
+    .offer { background:linear-gradient(135deg,#171106,#0d111d 60%,#1b1724); border-top:1px solid rgba(226,180,72,.32); border-bottom:1px solid rgba(226,180,72,.32); }
+    .offer-box { max-width:620px; margin:auto; padding:42px; background:rgba(8,11,18,.72); border:1px solid var(--gold); border-radius:19px; text-align:center; box-shadow:0 0 80px rgba(226,180,72,.1); }
+    .price-was { color:var(--muted); text-decoration:line-through; margin:21px 0 0; }
+    .price { color:var(--gold); font:900 clamp(56px,9vw,80px)/1 "Playfair Display",serif; margin:0; }
+    .offer-list { padding:0; list-style:none; text-align:left; margin:27px 0; }
+    .offer-list li { padding:8px 0; color:#ded8ce; }
+    .offer-list li::before { content:"✓"; color:var(--gold); font-weight:900; margin-right:11px; }
+    .delivery { background:rgba(109,224,180,.09); border:1px solid rgba(109,224,180,.28); color:#b7f5dd; border-radius:10px; padding:14px; font-size:14px; margin:21px 0; }
+    .series-grid { grid-template-columns:repeat(3,1fr); }
+    .series-card { border-radius:14px; padding:25px; background:var(--surface); border:1px solid rgba(255,255,255,.09); }
+    .series-card.current { border:2px solid var(--gold); background:linear-gradient(135deg,rgba(226,180,72,.15),rgba(226,180,72,.035)); }
+    .series-visual { height:205px; border-radius:10px; overflow:hidden; display:grid; place-items:center; position:relative; margin-bottom:22px; background:#090c13; }
+    .series-visual img { width:100%; height:100%; object-fit:cover; }
+    .series-cover { width:122px; height:168px; padding:18px 13px; border-radius:4px 9px 9px 4px; box-shadow:-8px 9px 0 rgba(0,0,0,.25),0 15px 25px rgba(0,0,0,.45); display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden; }
+    .series-cover::after { content:""; position:absolute; width:125px; height:125px; right:-56px; bottom:-52px; border:1px solid currentColor; border-radius:50%; opacity:.42; }
+    .series-cover small { font-size:7px; letter-spacing:1.1px; font-weight:800; z-index:1; }
+    .series-cover strong { font:800 21px/.95 "Playfair Display",serif; z-index:1; }
+    .series-cover span { font-size:8px; z-index:1; }
+    .skills-cover { background:linear-gradient(145deg,#121f48,#1676ad); color:#eaf4ff; }
+    .skills-cover strong em { color:#8fe4ff; font-style:normal; }
+    .choice-cover { background:linear-gradient(145deg,#1b182c,#66408f); color:#f7edff; }
+    .choice-cover strong em { color:#efca78; font-style:normal; }
+    .series-visual::before { content:""; position:absolute; width:160px; height:160px; border:1px solid rgba(226,180,72,.30); border-radius:50%; top:-72px; left:-56px; }
+    .series-visual::after { content:"✦"; position:absolute; color:var(--gold); font-size:29px; right:18px; bottom:13px; animation:glow 2.5s ease-in-out infinite; }
+    .series-no { color:var(--gold); font-weight:800; font-size:12px; letter-spacing:1.4px; text-transform:uppercase; }
+    .series-card h3 { font-size:25px; margin:9px 0; }
+    .series-card p { color:var(--muted); margin:0; }
+    .faq { max-width:760px; margin:auto; }
+    details { border-bottom:1px solid rgba(255,255,255,.10); padding:19px 0; }
+    summary { cursor:pointer; color:var(--cream); font:700 19px/1.4 "Playfair Display",serif; }
+    details p { color:var(--muted); margin:12px 0 0; }
+    .final { text-align:center; background:radial-gradient(circle at 50% 0,rgba(226,180,72,.21),transparent 42%), var(--surface); }
+    .final h2 { max-width:700px; margin:14px auto 18px; font-size:clamp(38px,5.5vw,62px); }
+    .final p { max-width:590px; color:#d2ccc2; margin:0 auto 29px; font-size:18px; }
+    footer { padding:28px 0; text-align:center; font-size:13px; color:var(--muted); }
+    @keyframes float { 0%,100% { transform:rotate(3deg) translateY(0); } 50% { transform:rotate(3deg) translateY(-12px); } }
+    @keyframes glow { 0%,100% { transform:scale(.9); opacity:.55; } 50% { transform:scale(1.18); opacity:1; } }
+    @keyframes pulse { 0%,100% { box-shadow:0 12px 35px rgba(226,180,72,.22); } 50% { box-shadow:0 12px 48px rgba(226,180,72,.66),0 0 0 7px rgba(226,180,72,.10); } }
+    .movement .button { animation:pulse 2.2s ease-in-out infinite; font-size:17px; padding:19px 28px; }
+    @media (max-width:800px) { .hero-grid { grid-template-columns:1fr; text-align:center; gap:49px; } .lead { margin-left:auto; margin-right:auto; } .pain-grid,.framework-grid,.steps-grid,.series-grid { grid-template-columns:repeat(2,1fr); } .transformation-grid,.brand-story,.movement-grid { grid-template-columns:1fr; } .transform-arrow { transform:rotate(90deg); justify-self:center; } }
+    @media (max-width:540px) { .wrap { width:min(100% - 30px,1120px); } .brand-nav { top:16px; } .brand-nav a:not(.brand-lockup) { display:none; } .hero { padding:105px 0 62px; } section { padding:62px 0; } .pain-grid,.framework-grid,.steps-grid,.belief-grid,.series-grid { grid-template-columns:1fr; } .button.secondary { display:none; } .offer-box { padding:29px 20px; } .movement-photos img:first-child { height:210px; } .movement-photos img { height:150px; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body>
+  <a class="topbar" href="#get-started">Special launch price: Get Mindset Makeover for ₦3,999 →</a>
+
+  <header class="hero">
+    <nav class="brand-nav" aria-label="Main navigation"><div class="wrap"><a class="brand-lockup" href="https://monetumthrive.co" target="_blank" rel="noopener"><img src="mindset-assets/monetum-logo.jpeg" alt="Monetum logo" />MonetumThrive</a><a href="#movement">Join the movement ↓</a></div></nav>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">12-Week Programme · 30-Day Practice · Instant PDF Download</span>
+        <h1>Stop Working Hard<br />and Staying <em>Stuck.</em></h1>
+        <p class="lead">A practical 12-week workbook for examining the beliefs, habits, and decisions shaping your financial future—so you can move forward with greater clarity and confidence.</p>
+        <a class="button" href="https://selar.com/j7psm9a46m" target="_blank" rel="noopener">Start Your Mindset Makeover — ₦3,999</a>
+        <a class="button secondary" href="#inside">See What’s Inside</a>
+        <p class="micro">Instant PDF access after secure payment · Read on any device</p>
+      </div>
+      <div class="book"><img src="mindset-assets/book-hero.jpeg" alt="Mindset Makeover book cover" /></div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="eyebrow">You’re Not Alone</span>
+          <h2>Does This Sound Like You?</h2>
+          <p>You may have ambition and ability—but still feel like something is keeping you from moving forward.</p>
+        </div>
+        <div class="pain-grid">
+          <article class="card pain-card"><span>◎</span><p>You work hard, yet still feel financially stuck.</p></article>
+          <article class="card pain-card"><span>◎</span><p>You have goals, but struggle to stay consistent.</p></article>
+          <article class="card pain-card"><span>◎</span><p>Fear, doubt, or procrastination interrupt your progress.</p></article>
+          <article class="card pain-card"><span>◎</span><p>You want to earn more but do not feel ready to take the next step.</p></article>
+          <article class="card pain-card"><span>◎</span><p>You are tired of surviving and ready to build intentionally.</p></article>
+          <article class="card pain-card"><span>◎</span><p>You want a practical place to begin—not another empty pep talk.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-surface">
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="eyebrow">The Method</span>
+          <h2>The M.I.N.D.S.E.T Framework</h2>
+          <p>Personal transformation works best as a process: awareness, better decisions, useful learning, and consistent action.</p>
+        </div>
+        <div class="framework-grid">
+          <article class="framework-card"><div class="letter">M</div><h3>Mental Awareness</h3><p>Recognise the beliefs and habits shaping your present results.</p></article>
+          <article class="framework-card"><div class="letter">I</div><h3>Identity Shift</h3><p>Become someone who follows through, learns, and grows.</p></article>
+          <article class="framework-card"><div class="letter">N</div><h3>New Patterns</h3><p>Replace unhelpful thinking patterns with constructive practices.</p></article>
+          <article class="framework-card"><div class="letter">D</div><h3>Decision Power</h3><p>Choose long-term growth over fear and short-term comfort.</p></article>
+          <article class="framework-card"><div class="letter">S</div><h3>Strategic Learning</h3><p>Focus on knowledge and skills that help you create value.</p></article>
+          <article class="framework-card"><div class="letter">E</div><h3>Execution Habits</h3><p>Build repeatable actions that turn insight into progress.</p></article>
+          <article class="framework-card"><div class="letter">T</div><h3>Transformation Lifestyle</h3><p>Make growth, discipline, and financial awareness part of daily life.</p></article>
+          <article class="framework-card"><div class="letter">+</div><h3>30-Day Reset</h3><p>Put the ideas into practice with a focused month of daily action.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap brand-story">
+        <img class="brand-story-image" src="mindset-assets/book-devices.jpeg" alt="Mindset Makeover on digital devices" />
+        <div>
+          <span class="eyebrow">Built for Where You’re Going</span>
+          <h2 style="font-size:clamp(36px,5vw,55px);margin:11px 0 17px;">A book for people ready to build more.</h2>
+          <p style="color:var(--muted);font-size:17px;margin:0;">Mindset Makeover is the first step in the MonetumThrive journey: a community built around intentional growth, valuable skills, financial awareness, and practical action.</p>
+          <div class="author-card"><img src="mindset-assets/aces-smith.jpeg" alt="Aces Smith, author of Mindset Makeover" /><div><span class="eyebrow">Meet the Author</span><h3>Aces Smith</h3><p>Founder of MonetumThrive.co and author of Mindset Makeover.</p><a href="https://www.facebook.com/share/16hVGcboHB/" target="_blank" rel="noopener" style="color:var(--gold);font-size:13px;font-weight:700;text-decoration:none;">Connect with Aces on Facebook →</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="transformation">
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="eyebrow">The Shift</span>
+          <h2>Who You Are Before—and Who You Can Become After.</h2>
+          <p>This book is not about becoming a different person overnight. It is about becoming more aware, more intentional, and more prepared to act on the life you want.</p>
+        </div>
+        <div class="transformation-grid">
+          <article class="transform-card before">
+            <span class="eyebrow" style="color:#f39b9b;">Before Mindset Makeover</span>
+            <h3>Feeling stuck and uncertain.</h3>
+            <ul>
+              <li>You carry unexamined beliefs about money and success.</li>
+              <li>You know what you want, but struggle to act consistently.</li>
+              <li>Fear, comparison, and self-doubt influence your choices.</li>
+              <li>You react to financial pressure without a clear plan.</li>
+              <li>You wait to feel ready before pursuing opportunities.</li>
+            </ul>
+          </article>
+          <div class="transform-arrow" aria-hidden="true">→</div>
+          <article class="transform-card after">
+            <span class="eyebrow">After Working Through the Book</span>
+            <h3>Clearer, more intentional, and ready to move.</h3>
+            <ul>
+              <li>You understand the beliefs and habits shaping your decisions.</li>
+              <li>You have written goals, reflection tools, and a daily action practice.</li>
+              <li>You respond to fear with more awareness and constructive action.</li>
+              <li>You have a stronger foundation for skills, income, and financial discipline.</li>
+              <li>You are more prepared to take the next practical step forward.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="inside">
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="eyebrow">Inside the Book</span>
+          <h2>12 Weeks. 3 Steps. A Stronger Foundation for Growth.</h2>
+          <p>Each week combines clear lessons, honest reflection, and practical exercises you can apply immediately.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step"><div class="step-header"><span class="step-tag">STEP ONE</span><h3>Understand Your Mindset</h3></div><ul><li>Week 1: Understanding Mindset</li><li>Week 2: Psychology of Wealth</li><li>Week 3: Abundance Thinking</li><li>Week 4: Reprogramming Your Patterns</li></ul></article>
+          <article class="step"><div class="step-header"><span class="step-tag">STEP TWO</span><h3>Rewire Your Mindset</h3></div><ul><li>Week 5: Self-Worth</li><li>Week 6: Wealth Identity</li><li>Week 7: Emotional Mastery</li><li>Week 8: Habits That Last</li></ul></article>
+          <article class="step"><div class="step-header"><span class="step-tag">STEP THREE</span><h3>Embody Success</h3></div><ul><li>Week 9: Vision Activation</li><li>Week 10: Entrepreneurial Thinking</li><li>Week 11: Financial Literacy</li><li>Week 12: Legacy Living</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-surface">
+      <div class="wrap">
+        <div class="section-intro"><span class="eyebrow">Week Two Highlight</span><h2>The Money Beliefs Worth Challenging</h2><p>Many people are not short on ambition; they are simply operating from beliefs they have never paused to examine.</p></div>
+        <div class="belief-grid">
+          <div class="belief"><div class="belief-old">“I’m not good with money.”</div><div class="belief-new">“I can learn to manage money more intentionally.”</div></div>
+          <div class="belief"><div class="belief-old">“I have to work hard to deserve wealth.”</div><div class="belief-new">“I can create value through focused, intelligent work.”</div></div>
+          <div class="belief"><div class="belief-old">“Making money means selling out.”</div><div class="belief-new">“I can serve people well and earn fairly.”</div></div>
+          <div class="belief"><div class="belief-old">“I have to figure everything out alone.”</div><div class="belief-new">“Guidance, learning, and community can accelerate growth.”</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="get-started">
+      <div class="wrap"><div class="offer-box">
+        <span class="eyebrow">Get Your Copy</span>
+        <h2 style="font-size:clamp(36px,5vw,52px);margin-top:11px;">Start Your Makeover Today</h2>
+        <p class="price-was">Regular price: ₦7,999</p><p class="price">₦3,999</p><p class="micro">One-time payment · No subscription · Yours to keep</p>
+        <ul class="offer-list"><li>Complete 12-week Mindset Makeover ebook</li><li>Reflection and journalling exercises throughout</li><li>The 30-Day Mindset Reset programme</li><li>Financial literacy foundations and Legacy Living chapters</li><li>Instant PDF download after payment</li></ul>
+        <div class="delivery">After secure payment, you will be taken straight to your download page. No waiting and no extra steps.</div>
+        <a class="button" href="https://selar.com/j7psm9a46m" target="_blank" rel="noopener">Get Mindset Makeover Now</a>
+      </div></div>
+    </section>
+
+    <section class="movement" id="movement">
+      <div class="wrap movement-grid">
+        <div class="movement-copy">
+          <span class="eyebrow">More Than an Ebook</span>
+          <h2>Join a growing movement of people building their future on purpose.</h2>
+          <p>MonetumThrive is for people who want to turn ambition into action—one decision, one skill, and one disciplined step at a time.</p>
+          <ul class="movement-list"><li>Grow your mindset before you grow your income.</li><li>Learn valuable skills and put them to work.</li><li>Build financial confidence with practical habits.</li><li>Connect with a community that believes growth is possible.</li></ul>
+          <a class="button" href="https://www.facebook.com/share/1BEixFmEoV/" target="_blank" rel="noopener">Join the MonetumThrive Movement</a>
+          <div class="socials" aria-label="Follow MonetumThrive"><a class="social" href="https://www.facebook.com/share/1BEixFmEoV/" target="_blank" rel="noopener" aria-label="Follow MonetumThrive on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H8v3h2.4v8h3.1z"/></svg></a><a class="social" href="https://www.instagram.com/monetumthrive.co?igsh=OGN1azV1Njk3bWZx" target="_blank" rel="noopener" aria-label="Follow MonetumThrive on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.3 2h9.4A5.3 5.3 0 0 1 22 7.3v9.4a5.3 5.3 0 0 1-5.3 5.3H7.3A5.3 5.3 0 0 1 2 16.7V7.3A5.3 5.3 0 0 1 7.3 2Zm-.2 2A3.1 3.1 0 0 0 4 7.1v9.8A3.1 3.1 0 0 0 7.1 20h9.8a3.1 3.1 0 0 0 3.1-3.1V7.1A3.1 3.1 0 0 0 16.9 4H7.1Zm9.1 1.5a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 6.8A5.2 5.2 0 1 1 6.8 12 5.2 5.2 0 0 1 12 6.8Zm0 2A3.2 3.2 0 1 0 15.2 12 3.2 3.2 0 0 0 12 8.8Z"/></svg></a><a class="social" href="https://www.tiktok.com/@aces_smith?_r=1&_t=ZS-97gxmxHLqa1" target="_blank" rel="noopener" aria-label="Follow Aces Smith on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 3c.3 2.2 1.6 3.6 3.8 3.8v3.1a8 8 0 0 1-3.8-1.1v6.4a6.4 6.4 0 1 1-5.6-6.3v3.2a3.3 3.3 0 1 0 2.4 3.1V3h3.2Z"/></svg></a></div>
+        </div>
+        <div class="movement-photos"><img src="mindset-assets/movement-community.jpeg" alt="MonetumThrive community members" /><img src="mindset-assets/movement-future.jpeg" alt="A growing future with MonetumThrive" /><img src="mindset-assets/book-collection.jpeg" alt="Mindset Makeover book collection" /></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap"><div class="section-intro"><span class="eyebrow">What Comes Next</span><h2>Book 1 of a Practical Growth Series</h2><p>Mindset Makeover lays the foundation for the practical income-building stages ahead.</p></div>
+        <div class="series-grid">
+          <article class="series-card current"><div class="series-visual"><img src="mindset-assets/book-collection.jpeg" alt="Mindset Makeover book mockup" /></div><div class="series-no">Book 1 · Available now</div><h3>Mindset Makeover</h3><p>Build your mindset, habits, financial awareness, and confidence for growth.</p></article>
+          <article class="series-card"><div class="series-visual"><div class="series-cover skills-cover"><small>MONETUMTHRIVE.CO</small><strong>SKILL-TO-<em>SCALE</em></strong><span>Turn your value into an offer.</span></div></div><div class="series-no">Book 2 · Coming next</div><h3>Skill-to-Scale Framework</h3><p>Learn how to identify a valuable skill and package it into an offer people will pay for.</p></article>
+          <article class="series-card"><div class="series-visual"><div class="series-cover choice-cover"><small>MONETUMTHRIVE.CO</small><strong>CHOICE <em>SKILLS</em></strong><span>Build practical paths to income.</span></div></div><div class="series-no">Book 3 · Coming soon</div><h3>Choice Skills</h3><p>Explore practical skills you can develop for income opportunities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-surface"><div class="wrap"><div class="section-intro"><span class="eyebrow">Common Questions</span><h2>FAQ</h2></div><div class="faq">
+      <details><summary>How do I receive the ebook?</summary><p>Once payment is confirmed, you will be redirected to a download page where the PDF is ready immediately.</p></details>
+      <details><summary>Is it really a 12-week programme?</summary><p>Yes. The book is arranged across 12 weekly chapters and three stages. You can follow it week by week or revisit the chapters most relevant to you.</p></details>
+      <details><summary>What do I need to complete the programme?</summary><p>The PDF works on any smartphone, tablet, or computer. Keep a notebook or journal nearby for the reflection exercises.</p></details>
+      <details><summary>Is this financial or investment advice?</summary><p>No. It is an educational personal-development workbook that includes foundational financial concepts. It does not replace advice tailored to your circumstances.</p></details>
+    </div></div></section>
+  </main>
+
+  <section class="final"><div class="wrap"><span class="eyebrow">One Intentional Step</span><h2>Your Future Will Not Change <em class="gold">by Accident.</em></h2><p>Start with the beliefs you carry. Strengthen the habits you repeat. Build the skills that create value—and keep moving.</p><a class="button" href="https://selar.com/j7psm9a46m" target="_blank" rel="noopener">Get Mindset Makeover — ₦3,999</a><p class="micro">Educational and personal-development content only. Results depend on individual circumstances, decisions, effort, and opportunity.</p></div></section>
+  <footer><div class="wrap">© 2025 Mindset Makeover · Aces Smith · MonetumThrive.co<br /><span style="display:inline-block;margin-top:7px;">Follow @monetumthrive.co on Facebook, Instagram, and TikTok.</span></div></footer>
+</body>
+</html>
